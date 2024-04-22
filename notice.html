@@ -1,3 +1,45 @@
-<h1>
-    你被骗了！
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blinking Text</title>
+<style>
+/* 定义闪烁动画 */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* 将闪烁动画应用到文字元素上 */
+.blinking-text {
+  animation: blink 2s infinite; /* 指定动画名称、持续时间和播放次数 */
+  font-size: 60px; /* 设置文字大小 */
+  position: absolute; /* 设置为绝对定位，以便控制位置 */
+}
+
+/* 设置不同位置的闪烁文字 */
+#text1 {
+  top: 20px;
+  left: 20px;
+}
+
+#text2 {
+  top: 180px;
+  left: 730px;
+}
+
+#text3 {
+  top: 400px;
+  left: 200px;
+}
+</style>
+</head>
+<body>
+<!-- 在这里添加要闪烁的文字 -->
+<p id="text1" class="blinking-text">你被骗了！</p>
+<p id="text2" class="blinking-text">这不是真实的云谷网站！</p>
+<p id="text3" class="blinking-text">本次实验不会真实盗取你的信息</p>
+</body>
+</html>
